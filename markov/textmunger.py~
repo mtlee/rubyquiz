@@ -1,0 +1,34 @@
+import os.path 
+import random 
+import string
+
+HEREDIR = os.path.abspath(os.path.dirname(__file__)) 
+heights=os.path.join(HEREDIR, '768.txt') 
+
+def mung(filename): 
+    f=open(filename, 'r').readlines() 
+    
+    for line in f: 
+        if not line: 
+            pass 
+        else: 
+            k= line.split()
+            munged_text=''
+            for word in k: 
+                munged_text= munged_text + ' '+ scramble(word)
+            print munged_text
+        
+
+def scramble(word):
+    l= list(word)
+    d=[]
+    for char in l: 
+        if char.strip(string.punctuation)=='': 
+            
+    return word
+
+
+#think about using string.punctuation to 
+
+
+mung('768.txt') 
